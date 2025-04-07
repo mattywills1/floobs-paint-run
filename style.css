@@ -1,0 +1,134 @@
+/* Floob's Paint Run - Stylesheet */
+
+/* Basic Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Arial', sans-serif; background-color: #333; display: flex;
+    justify-content: center; align-items: center; min-height: 100vh; overflow: hidden;
+}
+
+#game-container {
+    position: relative; width: 1000px; height: 600px;
+    border: 2px solid #fff; background-color: #666;
+    overflow: hidden;
+}
+
+#gameCanvas { display: block; background-color: #87CEEB; }
+
+/* --- Intro Screen Styles --- */
+#intro-screen {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: url('assets/title_screen.jpg'); background-size: cover;
+    background-position: center; background-repeat: no-repeat;
+    z-index: 10; opacity: 1;
+}
+#intro-screen.fade-out { opacity: 0; pointer-events: none; }
+
+/* --- Intro Transition Overlay Style --- */
+#intro-transition {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: #FFF; z-index: 15; opacity: 0;
+    pointer-events: none; transition: opacity 0.4s ease-in-out;
+}
+#intro-transition.active { opacity: 1; pointer-events: auto; }
+
+
+/* --- Start Button Styling (Position Adjusted Again) --- */
+#start-button {
+    position: absolute; left: 50%; transform: translateX(-50%);
+    /* Moved up 35px from 320px */
+    top: 285px;
+    width: 182px; height: 58px; padding: 0; font-size: 1.5em; font-weight: bold;
+    color: #FFF;
+    background-color: #5cc0b5; /* Keep new color */
+    border: 2px solid white; border-radius: 25px; cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); display: flex; justify-content: center;
+    align-items: center; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    z-index: 11;
+}
+#start-button:hover { background-color: #6cd0c5; }
+#start-button:active { transform: translateX(-50%) scale(0.98); }
+
+
+/* --- Win Screen Styles --- */
+#win-screen {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); display: flex;
+    flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; color: #FFF; padding: 20px; z-index: 11;
+}
+
+/* --- Congratulations Graphic Styling --- */
+#congrats-graphic {
+    display: block; width: 700px; height: 467px; max-width: 90%;
+    object-fit: contain; margin-bottom: 15px;
+}
+
+/* --- Container for Bottom Row on Win Screen --- */
+.win-screen-bottom-row {
+    display: flex; align-items: center; justify-content: center;
+    gap: 30px; width: 100%; margin-top: 10px;
+}
+
+/* --- Social Links Styling --- */
+.social-links { display: flex; gap: 25px; }
+.social-links img { width: 40px; height: 40px; opacity: 0.8; transition: opacity 0.2s ease; }
+.social-links a:hover img { opacity: 1; }
+
+/* --- Play Again Button Styling --- */
+#play-again-button {
+    position: relative; left: auto; transform: none; top: auto;
+    width: 182px; height: 58px; padding: 0; font-size: 1.3em; font-weight: bold;
+    color: #FFF;
+    background-color: #5cc0b5; /* Match start button color */
+    border: 2px solid white; border-radius: 25px; cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3); display: flex; justify-content: center;
+    align-items: center; text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Reset margin */
+}
+#play-again-button:hover { background-color: #6cd0c5; }
+#play-again-button:active { transform: scale(0.98); }
+
+
+/* --- Goal Popup Styles (UPDATED: Centered, Color, Border) --- */
+#goal-popup {
+    position: absolute;
+    /* Center screen */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center precisely */
+    width: 80%; /* Max width */
+    max-width: 450px; /* Prevent getting too wide */
+    background-color: #5cc0b5; /* NEW background color */
+    color: white;
+    padding: 20px 30px; /* More padding */
+    border-radius: 15px; /* More rounded */
+    border: 3px solid white; /* White border */
+    font-size: 1.43em; /* Keep increased font size */
+    font-weight: bold; text-align: center; z-index: 12;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+}
+
+/* --- Instagram Popup Styles (NEW) --- */
+#instagram-popup {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    background-color: #f0f0f0; color: #333; padding: 25px; border-radius: 10px;
+    border: 2px solid #ccc; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 90%; max-width: 400px; z-index: 20; /* Above everything */
+    text-align: left;
+}
+#instagram-popup p { font-size: 1.2em; font-weight: bold; margin-bottom: 15px; text-align: center;}
+#instagram-popup ol { margin-left: 20px; margin-bottom: 20px; }
+#instagram-popup li { margin-bottom: 8px; font-size: 1em; }
+#instagram-popup button {
+    display: block; margin: 15px auto 0 auto; padding: 10px 25px; font-size: 1em;
+    cursor: pointer; background-color: #5cc0b5; color: white; border: none;
+    border-radius: 5px;
+}
+
+
+/* Utility class to hide elements */
+.hidden { display: none !important; }

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floob's Paint Run</title>
+    <link rel="icon" type="image/png" href="assets/game-favicon.png">
+    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="Floob's Paint Run - A simple 2D platformer game.">
+</head>
+<body>
+    <!-- Main game container -->
+    <div id="game-container">
+        <!-- Canvas for the actual game -->
+        <canvas id="gameCanvas" width="1000" height="600">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+
+        <!-- Intro Screen Overlay -->
+        <div id="intro-screen">
+            <button id="start-button">START</button>
+            <div id="intro-transition" class="hidden"></div>
+        </div>
+
+        <!-- Win Screen Overlay -->
+        <div id="win-screen" class="hidden">
+            <img id="congrats-graphic" src="assets/congratulations.png" alt="Congratulations!">
+            <!-- Container for Bottom Row -->
+            <div class="win-screen-bottom-row">
+                <div class="social-links">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=[YOUR_GAME_URL_HERE]" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
+                        <img src="assets/facebook_icon.png" alt="Facebook">
+                    </a>
+                    <a href="#" id="instagram-share-link" aria-label="Share on Instagram">
+                        <img src="assets/instagram_icon.png" alt="Instagram">
+                        <!-- The extra img tag that was here is now REMOVED -->
+                    </a>
+                </div>
+                 <button id="play-again-button">Play Again?</button>
+            </div>
+        </div>
+
+        <!-- Goal Requirement Popup -->
+        <div id="goal-popup" class="hidden">
+            <!-- Text set by JS -->
+        </div>
+
+        <!-- Instagram Instructions Popup -->
+        <div id="instagram-popup" class="hidden">
+            <p>To share on Instagram:</p>
+            <ol>
+                <li>Take a screenshot of the game!</li>
+                <li>Open Instagram and create a new post or story.</li>
+                <li>Upload your screenshot.</li>
+                <li>Tag us @[YOUR_IG_HANDLE]! (Optional)</li>
+            </ol>
+            <button id="close-ig-popup">Got it!</button>
+        </div>
+
+    </div>
+
+    <script src="game.js" defer></script>
+</body>
+</html>
