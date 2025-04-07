@@ -8,16 +8,27 @@
     <link rel="stylesheet" href="style.css">
     <meta name="description" content="Floob's Paint Run - A simple 2D platformer game.">
 
-    <!-- === ADD OPEN GRAPH TAGS BELOW === -->
-    <!-- These help social media sites understand your page -->
+    <!-- === Open Graph / Social Media Preview Tags === -->
     <meta property="og:title" content="Floob's Paint Run!" />
     <meta property="og:type" content="website" />
-    <!-- Use your specific game URL here -->
+    <!-- Your specific game URL -->
     <meta property="og:url" content="https://mattywills1.github.io/floobs-paint-run/" />
-     <!-- Use a FULL URL to an image for the preview -->
+     <!-- FULL URL to the title screen image -->
     <meta property="og:image" content="https://mattywills1.github.io/floobs-paint-run/assets/title_screen.jpg" />
+     <!-- Recommended image dimensions for OG:image are 1200x630, but title screen should work -->
+    <meta property="og:image:width" content="1000" /> <!-- Specify image width -->
+    <meta property="og:image:height" content="600" /> <!-- Specify image height -->
     <meta property="og:description" content="Help Floob collect paint droplets and restore color to Chromia in this fun platformer!" />
-    <!-- === END OPEN GRAPH TAGS === -->
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image" /> <!-- Use large image card -->
+    <meta name="twitter:title" content="Floob's Paint Run!" />
+    <meta name="twitter:description" content="Help Floob collect paint droplets and restore color to Chromia in this fun platformer!" />
+    <!-- FULL URL to the title screen image for Twitter -->
+    <meta name="twitter:image" content="https://mattywills1.github.io/floobs-paint-run/assets/title_screen.jpg" />
+    <!-- Optional: Link to your Twitter handle -->
+    <!-- <meta name="twitter:creator" content="@YourTwitterHandle"> -->
+    <!-- === END Social Media Preview Tags === -->
 
 </head>
 <body>
@@ -40,10 +51,11 @@
             <!-- Container for Bottom Row -->
             <div class="win-screen-bottom-row">
                 <div class="social-links">
-                    <!-- UPDATED Facebook Link -->
+                    <!-- Facebook Link -->
                     <a href="https://www.facebook.com/sharer/sharer.php?u=https://mattywills1.github.io/floobs-paint-run/" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
                         <img src="assets/facebook_icon.png" alt="Facebook">
                     </a>
+                    <!-- Instagram Link -->
                     <a href="#" id="instagram-share-link" aria-label="Share on Instagram">
                         <img src="assets/instagram_icon.png" alt="Instagram">
                     </a>
@@ -64,7 +76,7 @@
                 <li>Take a screenshot of the game!</li>
                 <li>Open Instagram and create a new post or story.</li>
                 <li>Upload your screenshot.</li>
-                <li>Tag us @[YOUR_IG_HANDLE]! (Optional)</li> <!-- Remember to update handle if you have one -->
+                <li>Tag us @[YOUR_IG_HANDLE]! (Optional)</li>
             </ol>
             <button id="close-ig-popup">Got it!</button>
         </div>
