@@ -7,6 +7,18 @@
     <link rel="icon" type="image/png" href="assets/game-favicon.png">
     <link rel="stylesheet" href="style.css">
     <meta name="description" content="Floob's Paint Run - A simple 2D platformer game.">
+
+    <!-- === ADD OPEN GRAPH TAGS BELOW === -->
+    <!-- These help social media sites understand your page -->
+    <meta property="og:title" content="Floob's Paint Run!" />
+    <meta property="og:type" content="website" />
+    <!-- Use your specific game URL here -->
+    <meta property="og:url" content="https://mattywills1.github.io/floobs-paint-run/" />
+     <!-- Use a FULL URL to an image for the preview -->
+    <meta property="og:image" content="https://mattywills1.github.io/floobs-paint-run/assets/title_screen.jpg" />
+    <meta property="og:description" content="Help Floob collect paint droplets and restore color to Chromia in this fun platformer!" />
+    <!-- === END OPEN GRAPH TAGS === -->
+
 </head>
 <body>
     <!-- Main game container -->
@@ -28,12 +40,12 @@
             <!-- Container for Bottom Row -->
             <div class="win-screen-bottom-row">
                 <div class="social-links">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=[YOUR_GAME_URL_HERE]" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
+                    <!-- UPDATED Facebook Link -->
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://mattywills1.github.io/floobs-paint-run/" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
                         <img src="assets/facebook_icon.png" alt="Facebook">
                     </a>
                     <a href="#" id="instagram-share-link" aria-label="Share on Instagram">
                         <img src="assets/instagram_icon.png" alt="Instagram">
-                        <!-- The extra img tag that was here is now REMOVED -->
                     </a>
                 </div>
                  <button id="play-again-button">Play Again?</button>
@@ -52,7 +64,7 @@
                 <li>Take a screenshot of the game!</li>
                 <li>Open Instagram and create a new post or story.</li>
                 <li>Upload your screenshot.</li>
-                <li>Tag us @[YOUR_IG_HANDLE]! (Optional)</li>
+                <li>Tag us @[YOUR_IG_HANDLE]! (Optional)</li> <!-- Remember to update handle if you have one -->
             </ol>
             <button id="close-ig-popup">Got it!</button>
         </div>
